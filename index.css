@@ -257,6 +257,75 @@ header {
   line-height: 1.4;
 }
 
+/* Policy Resources Section */
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.policy-card {
+  background: rgba(249, 115, 22, 0.05);
+  border: 1px solid rgba(249, 115, 22, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.policy-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-orange);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15);
+  background: rgba(249, 115, 22, 0.1);
+}
+
+.policy-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.policy-card i {
+  font-size: 2.5rem;
+  color: var(--accent-orange);
+}
+
+.policy-content h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.policy-content p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-orange);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: auto;
+  transition: gap 0.3s ease;
+}
+
+.policy-card:hover .download-link {
+  gap: 0.8rem;
+}
+
 /* Service Section */
 .service-section {
   border-top: none;
@@ -441,6 +510,9 @@ footer {
     grid-template-columns: 1fr;
   }
   .service-grid {
+    grid-template-columns: 1fr;
+  }
+  .policy-grid {
     grid-template-columns: 1fr;
   }
   .nav-links {
